@@ -7,12 +7,12 @@ namespace CodeWithMosh
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World !");
-            byte number = 200;
-            int count = 10;
-            char letter = 'A';
-            string firstName = "Santosh";
-            float totalPrice = 22.5f;
-            bool isWorking = false;
+            var number = 200;
+            var count = 10;
+            var letter = 'A';
+            var firstName = "Santosh";
+            var totalPrice = 22.5f;
+            var isWorking = false;
             Console.WriteLine(number);
             Console.WriteLine(count);
             Console.WriteLine(totalPrice);
