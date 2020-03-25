@@ -8,13 +8,14 @@ namespace TypeConversion
         {            
             try
             {
-                var str = "True";
-                bool b = Convert.ToBoolean(str);
-                Console.WriteLine(b);
+                var a = 11;
+                var b = 12;
+                Console.WriteLine((float)a / (float)b);
+
             }
             catch (Exception ex)
             {
-                Console.WriteLine("String could not be converted to boolean...");
+                Console.WriteLine("Exception occurred...");
             }
 
         }
