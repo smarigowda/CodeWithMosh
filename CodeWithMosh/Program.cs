@@ -8,18 +8,23 @@ namespace ValueAndReferenceTypes
     {
         static void Main(string[] args)
         {
-            int a = 9;
-            int b = a;
-            b++;
-            Console.WriteLine($"a = {a}, b = {b}");
+            int number = 10;
+            Increment(number);
+            Console.WriteLine(number);
 
-            var names1 = new string[3] { "Santosh", "Roopa", "Sukruthi" };
-            var names2 = names1;
+            var person = new Person() { Age = 30 };
+            MakeOld(person);
+            Console.WriteLine(person.Age);
+        }
 
-            names2[0] = "Santosh Marigowda";
+        public static void Increment(int number)
+        {
+            number++;
+        }
 
-            Console.WriteLine($"names1[0] = {names1[0]}, names2[0] = {names2[0]}");
-
+        public static void MakeOld(Person person)
+        {
+            person.Age += 20;
         }
     }
 }
