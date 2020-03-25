@@ -2,32 +2,23 @@
 using CodeWithMosh;
 using CodeWithMosh.Math;
 
-namespace NonPrimitives
+namespace ValueAndReferenceTypes
 {
-    public enum ShippingMethod
-    {
-        Regular = 1,
-        Regsitered = 2,
-        Express = 3
-    }
-
     class Program
     {
         static void Main(string[] args)
         {
-            var method = ShippingMethod.Express;
-            Console.WriteLine(method);
-            Console.WriteLine(method.ToString());
-            Console.WriteLine((int)method);
+            int a = 9;
+            int b = a;
+            b++;
+            Console.WriteLine($"a = {a}, b = {b}");
 
-            var methodId = 3;
+            var names1 = new string[3] { "Santosh", "Roopa", "Sukruthi" };
+            var names2 = names1;
 
-            Console.WriteLine((ShippingMethod)methodId);
+            names2[0] = "Santosh Marigowda";
 
-            string methodName = "Regular";
-
-            var name = (ShippingMethod)Enum.Parse(typeof(ShippingMethod), methodName);
-            Console.WriteLine(name);
+            Console.WriteLine($"names1[0] = {names1[0]}, names2[0] = {names2[0]}");
 
         }
     }
