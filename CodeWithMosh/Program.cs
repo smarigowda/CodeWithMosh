@@ -7,26 +7,26 @@ namespace NonPrimitives
     class Program
     {
         static void Main(string[] args)
-        {            
-            try
-            {
-                var a = 11;
-                var b = 12;
-                Console.WriteLine((float)a / (float)b);
+        {
+            var numbers = new int[3];
+            numbers[0] = 100;
+            numbers[1] = 300;
+            numbers[2] = 400;
 
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Exception occurred...{ex}");
-            }
+            Console.WriteLine(numbers[0]);
+            Console.WriteLine(numbers[1]);
+            Console.WriteLine(numbers[2]);
 
-            var person = new Person();
-            person.FirstName = "Santosh";
-            person.LastName = "Marigowea";
-            person.Introuduce();
+            var flags = new bool[3];
+            flags[0] = true;
+            Console.WriteLine(flags[0]);
+            Console.WriteLine(flags[1]);
+            Console.WriteLine(flags[2]);
 
-            var calc = new Calculator();
-            Console.WriteLine(calc.Add(10, 12));
+            var names = new string[3] { "Santosh", "Roopa", "Sukruthi" };
+            Console.WriteLine(names[0]);
+            Console.WriteLine(names[1]);
+            Console.WriteLine(names[2]);
         }
     }
 }
