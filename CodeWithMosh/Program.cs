@@ -4,23 +4,31 @@ using CodeWithMosh.Math;
 
 namespace NonPrimitives
 {
+    public enum ShippingMethod
+    {
+        Regular = 1,
+        Regsitered = 2,
+        Express = 3
+    }
+
     class Program
     {
         static void Main(string[] args)
         {
-            var firstName = "Santosh";
-            var lastName = "Marigowda";
+            var method = ShippingMethod.Express;
+            Console.WriteLine(method);
+            Console.WriteLine(method.ToString());
+            Console.WriteLine((int)method);
 
-            var fullName = string.Format("My name is {0} {1}", firstName, lastName);
+            var methodId = 3;
 
-            Console.WriteLine(fullName);
+            Console.WriteLine((ShippingMethod)methodId);
 
-            var names = new string[3] { "Santosh", "Roopa", "Sukruthi" };
-            Console.WriteLine(string.Join(',', names));
+            string methodName = "Regular";
 
-            Console.WriteLine(@"Hi John
-Please have a look into
-c:\home\santosh\");
+            var name = (ShippingMethod)Enum.Parse(typeof(ShippingMethod), methodName);
+            Console.WriteLine(name);
+
         }
     }
 }
