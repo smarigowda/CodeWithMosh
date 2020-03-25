@@ -8,25 +8,19 @@ namespace NonPrimitives
     {
         static void Main(string[] args)
         {
-            var numbers = new int[3];
-            numbers[0] = 100;
-            numbers[1] = 300;
-            numbers[2] = 400;
+            var firstName = "Santosh";
+            var lastName = "Marigowda";
 
-            Console.WriteLine(numbers[0]);
-            Console.WriteLine(numbers[1]);
-            Console.WriteLine(numbers[2]);
+            var fullName = string.Format("My name is {0} {1}", firstName, lastName);
 
-            var flags = new bool[3];
-            flags[0] = true;
-            Console.WriteLine(flags[0]);
-            Console.WriteLine(flags[1]);
-            Console.WriteLine(flags[2]);
+            Console.WriteLine(fullName);
 
             var names = new string[3] { "Santosh", "Roopa", "Sukruthi" };
-            Console.WriteLine(names[0]);
-            Console.WriteLine(names[1]);
-            Console.WriteLine(names[2]);
+            Console.WriteLine(string.Join(',', names));
+
+            Console.WriteLine(@"Hi John
+Please have a look into
+c:\home\santosh\");
         }
     }
 }
