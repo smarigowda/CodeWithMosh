@@ -1,6 +1,8 @@
 ﻿using System;
+using CodeWithMosh;
+using CodeWithMosh.Math;
 
-namespace TypeConversion
+namespace NonPrimitives
 {
     class Program
     {
@@ -15,9 +17,16 @@ namespace TypeConversion
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Exception occurred...");
+                Console.WriteLine($"Exception occurred...{ex}");
             }
 
+            var person = new Person();
+            person.FirstName = "Santosh";
+            person.LastName = "Marigowea";
+            person.Introuduce();
+
+            var calc = new Calculator();
+            Console.WriteLine(calc.Add(10, 12));
         }
     }
 }
