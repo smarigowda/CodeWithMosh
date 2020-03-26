@@ -9,12 +9,23 @@ namespace ControlFlow_For_Loop
     {
         static void Main(string[] args)
         {
-            for(int i = 0; i<10; i++)
+            var name = "Santosh Marigowda";
+
+            for(var i = 0; i < name.Length; i++)
             {
-                if(i%2 == 0)
-                {
-                    Console.WriteLine(i);
-                }
+                Console.WriteLine(name[i]);
+            }
+
+            foreach( var letter in name)
+            {
+                Console.WriteLine(letter);
+            }
+
+            var numbers = new int [] { 1, 2, 3, 4,};
+
+            foreach(int number in numbers)
+            {
+                Console.WriteLine(number);
             }
         }
     }
