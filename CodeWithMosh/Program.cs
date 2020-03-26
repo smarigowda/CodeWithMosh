@@ -3,24 +3,18 @@ using CodeWithMosh;
 using CodeWithMosh.Math;
 using CodeWithMosh.Enums;
 
-namespace While_Loop
+namespace RandomClass
 {
     class Program
     {
         static void Main(string[] args)
         {
-            while(true)
+            var random = new Random();
+            for(int i = 0; i < 10; i++)
             {
-                Console.WriteLine("Enter a name (space to break): ");
-                var name = Console.ReadLine();
-
-                if(!String.IsNullOrWhiteSpace(name))
-                {
-                    Console.WriteLine($"You entered: {name}");
-                    continue;
-                }
-                break;
+                Console.WriteLine(random.Next());
             }
+
         }
     }
 }
