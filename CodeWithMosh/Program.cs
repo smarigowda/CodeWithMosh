@@ -2,29 +2,26 @@
 using CodeWithMosh;
 using CodeWithMosh.Math;
 
-namespace ValueAndReferenceTypes
+namespace ConditionalsDemo
 {
     class Program
     {
         static void Main(string[] args)
         {
-            int number = 10;
-            Increment(number);
-            Console.WriteLine(number);
+            int hour = 10;
 
-            var person = new Person() { Age = 30 };
-            MakeOld(person);
-            Console.WriteLine(person.Age);
-        }
-
-        public static void Increment(int number)
-        {
-            number++;
-        }
-
-        public static void MakeOld(Person person)
-        {
-            person.Age += 20;
+            if (hour >= 0 && hour <= 12)
+            {
+                Console.WriteLine("Good morning");
+            }
+            else if (hour > 12 && hour <= 18)
+            {
+                Console.WriteLine("Good afternoon");
+            }
+            else if (hour >18 )
+            {
+                Console.WriteLine("Good evening");
+            }
         }
     }
 }
