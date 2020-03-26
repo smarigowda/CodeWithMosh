@@ -8,20 +8,11 @@ namespace ConditionalsDemo
     {
         static void Main(string[] args)
         {
-            int hour = 10;
+            var isGoldCustomer = true;
 
-            if (hour >= 0 && hour <= 12)
-            {
-                Console.WriteLine("Good morning");
-            }
-            else if (hour > 12 && hour <= 18)
-            {
-                Console.WriteLine("Good afternoon");
-            }
-            else if (hour >18 )
-            {
-                Console.WriteLine("Good evening");
-            }
+            var price = isGoldCustomer ? 19.99f : 29.99;
+
+            Console.WriteLine($"Price = {price}");
         }
     }
 }
