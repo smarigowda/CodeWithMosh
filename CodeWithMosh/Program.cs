@@ -1,18 +1,28 @@
 ﻿using System;
 using CodeWithMosh;
 using CodeWithMosh.Math;
+using CodeWithMosh.Enums;
 
-namespace ConditionalsDemo
+namespace SwitchCaseDemo
 {
     class Program
     {
         static void Main(string[] args)
         {
-            var isGoldCustomer = true;
+            var season = Season.Spring;
 
-            var price = isGoldCustomer ? 19.99f : 29.99;
-
-            Console.WriteLine($"Price = {price}");
+            switch(season)
+            {
+                case Season.Autumn:
+                    Console.WriteLine("It's Autumn");
+                    break;
+                case Season.Spring:
+                    Console.WriteLine("It's Spring");
+                    break;
+                default:
+                    Console.WriteLine("Unknown Season...!");
+                    break;
+            }
         }
     }
 }
