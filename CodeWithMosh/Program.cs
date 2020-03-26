@@ -3,24 +3,23 @@ using CodeWithMosh;
 using CodeWithMosh.Math;
 using CodeWithMosh.Enums;
 
-namespace ControlFlow__Ex1
+namespace ControlFlow__Ex3_Factorial
 {
     class Program
     {
         static void Main(string[] args)
         {
-            int total = 0;
-            while(true)
+            Console.WriteLine("Enter a number: ");
+            var input = Console.ReadLine();
+            var inputNum = Convert.ToInt32(input);
+            int factorial = 1;
+            int i = 1;
+            while(i <= inputNum)
             {
-                Console.WriteLine("Enter a Number (ok to exit) :");
-                var input = Console.ReadLine();
-                if (input == "ok")
-                {
-                    break;
-                }
-                total = total + Convert.ToInt32(input);
+                factorial = factorial * i;
+                i++;
             }
-            Console.WriteLine($"Total of all numbers = {total}");
+            Console.WriteLine($"Factorial of {inputNum} is {factorial}");
 
         }
     }
