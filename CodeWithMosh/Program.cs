@@ -3,21 +3,22 @@ using CodeWithMosh;
 using CodeWithMosh.Math;
 using CodeWithMosh.Enums;
 
-namespace RandomClass
+namespace ControlFlow__Ex1
 {
     class Program
     {
         static void Main(string[] args)
         {
-            var random = new Random();
-            var buffer = new char[10];
-            for (int i = 0; i < 10; i++)
-            {
-                buffer[i] = (char)('a' + random.Next(0, 26));
+            int total = 0;
+            for(int i = 1; i <=100; i++ )
+            {   
+                if(i%3 == 0)
+                {
+                    total++;
+                }
             }
 
-            var password = new string(buffer);
-            Console.WriteLine(password);
+            Console.WriteLine($"Divisible by 3 Count = {total}");
         }
     }
 }
