@@ -14,12 +14,12 @@ namespace While_Loop
                 Console.WriteLine("Enter a name (space to break): ");
                 var name = Console.ReadLine();
 
-                if(String.IsNullOrWhiteSpace(name))
+                if(!String.IsNullOrWhiteSpace(name))
                 {
-                    break;
+                    Console.WriteLine($"You entered: {name}");
+                    continue;
                 }
-
-                Console.WriteLine($"You entered: {name}");
+                break;
             }
         }
     }
