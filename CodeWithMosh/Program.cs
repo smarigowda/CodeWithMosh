@@ -10,15 +10,18 @@ namespace ControlFlow__Ex1
         static void Main(string[] args)
         {
             int total = 0;
-            for(int i = 1; i <=100; i++ )
-            {   
-                if(i%3 == 0)
+            while(true)
+            {
+                Console.WriteLine("Enter a Number (ok to exit) :");
+                var input = Console.ReadLine();
+                if (input == "ok")
                 {
-                    total++;
+                    break;
                 }
+                total = total + Convert.ToInt32(input);
             }
+            Console.WriteLine($"Total of all numbers = {total}");
 
-            Console.WriteLine($"Divisible by 3 Count = {total}");
         }
     }
 }
