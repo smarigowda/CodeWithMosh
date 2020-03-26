@@ -10,11 +10,14 @@ namespace RandomClass
         static void Main(string[] args)
         {
             var random = new Random();
-            for(int i = 0; i < 10; i++)
+            var buffer = new char[10];
+            for (int i = 0; i < 10; i++)
             {
-                Console.Write((char)( 'a' + random.Next(0,26)));
+                buffer[i] = (char)('a' + random.Next(0, 26));
             }
 
+            var password = new string(buffer);
+            Console.WriteLine(password);
         }
     }
 }
