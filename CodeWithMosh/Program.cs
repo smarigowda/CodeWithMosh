@@ -3,20 +3,28 @@ using CodeWithMosh;
 using CodeWithMosh.Math;
 using CodeWithMosh.Enums;
 
-namespace ControlFlow_Ex_2
+namespace ControlFlow_Ex_3
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter firsr number: ");
-            var first = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter second number: ");
-            var second = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter the width of an image: ");
+            var width = Convert.ToInt32(Console.ReadLine());
 
-            var maxnum = first > second ? first : second;
+            Console.WriteLine("Enter the height of an image: ");
+            var height = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine($"Max Num = {maxnum}");
+            if(width > height)
+            {
+                Console.WriteLine("Image is Landscape");
+            } else if( height > width)
+            {
+                Console.WriteLine("Image is Portrait");
+            } else
+            {
+                Console.WriteLine("Image is Square");
+            }
 
         }
     }
