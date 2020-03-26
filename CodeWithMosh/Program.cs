@@ -3,26 +3,23 @@ using CodeWithMosh;
 using CodeWithMosh.Math;
 using CodeWithMosh.Enums;
 
-namespace SwitchCaseDemo
+namespace ControlFlow_Ex_1
 {
     class Program
     {
         static void Main(string[] args)
         {
-            var season = Season.Spring;
+            Console.WriteLine("Enter a number 0 - 12: ");
+            var input = Convert.ToInt32(Console.ReadLine());
 
-            switch(season)
+            if(input >=0 && input <= 12) 
             {
-                case Season.Autumn:
-                    Console.WriteLine("It's Autumn");
-                    break;
-                case Season.Spring:
-                    Console.WriteLine("It's Spring");
-                    break;
-                default:
-                    Console.WriteLine("Unknown Season...!");
-                    break;
+                Console.WriteLine($"Your input is valid, well done!");
+            } else
+            {
+                Console.WriteLine($"Your input is not valid !!!");
             }
+
         }
     }
 }
