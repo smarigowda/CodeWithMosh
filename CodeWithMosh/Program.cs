@@ -3,29 +3,36 @@ using CodeWithMosh;
 using CodeWithMosh.Math;
 using CodeWithMosh.Enums;
 
-namespace ControlFlow_Ex_3
+namespace ControlFlow_Ex_4
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter the width of an image: ");
-            var width = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter the speed limit in km /hr: ");
+            var speedlimit = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("Enter the height of an image: ");
-            var height = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter the speed of a Car: ");
+            var carspeed = Convert.ToInt32(Console.ReadLine());
 
-            if(width > height)
+            if(carspeed <= speedlimit)
             {
-                Console.WriteLine("Image is Landscape");
-            } else if( height > width)
-            {
-                Console.WriteLine("Image is Portrait");
-            } else
-            {
-                Console.WriteLine("Image is Square");
+                Console.WriteLine("Thanks ! Your car speed is below the speed limit.");
             }
 
+
+            var demeritPoints = 0;
+
+            if(carspeed > speedlimit)
+            {
+                demeritPoints = (carspeed - speedlimit) / 5;
+                Console.WriteLine($"Your demerit points = {demeritPoints}");
+            }
+
+            if(demeritPoints > 12)
+            {
+                Console.WriteLine("You have crossed the max demerit points. Your license is cancelled !!!");
+            }
         }
     }
 }
