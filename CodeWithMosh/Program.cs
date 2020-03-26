@@ -9,11 +9,17 @@ namespace While_Loop
     {
         static void Main(string[] args)
         {
-            var i = 0;
-            while( i < 10)
+            while(true)
             {
-                Console.WriteLine(i);
-                i++;
+                Console.WriteLine("Enter a name (space to break): ");
+                var name = Console.ReadLine();
+
+                if(String.IsNullOrWhiteSpace(name))
+                {
+                    break;
+                }
+
+                Console.WriteLine($"You entered: {name}");
             }
         }
     }
