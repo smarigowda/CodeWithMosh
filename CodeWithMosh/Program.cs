@@ -3,22 +3,39 @@ using CodeWithMosh;
 using CodeWithMosh.Math;
 using CodeWithMosh.Enums;
 
-namespace ControlFlow__String_Split
+namespace Arrays
 {
     class Program
     {
         static void Main(string[] args)
         {
-            var output = "1,20,3,4,5".Split(',');
-            var max = 0;
-            foreach(var letter in output)
+            //int[] numbers = new int[3] { 1, 2, 3 };
+            var numbers = new [] { 1, 5, 3, 4, 2, 6, 9, 8, 7 };
+            Console.WriteLine(numbers.Length);
+            var index = Array.IndexOf(numbers, 7);
+            Console.WriteLine(index);
+
+            int[] another = new int[9];
+
+            Array.Copy(numbers, another, 9);
+
+            foreach(var num in another)
             {
-                if(max < Convert.ToInt32(letter))
-                {
-                    max = Convert.ToInt32(letter);
-                }
+                Console.WriteLine(num);
             }
-            Console.WriteLine(max);
+
+            Console.WriteLine("Array.Sort");
+            Array.Sort(numbers);
+            foreach(var num in numbers)
+            {
+                Console.WriteLine(num);
+            }
+            Console.WriteLine("Array.Reverse");
+            Array.Reverse(numbers);
+            foreach (var num in numbers)
+            {
+                Console.WriteLine(num);
+            }
         }
     }
 }
