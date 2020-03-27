@@ -4,42 +4,36 @@ using CodeWithMosh.Math;
 using CodeWithMosh.Enums;
 using System.Collections.Generic;
 
-namespace Lists
+namespace DateTime_Demo
 {
     class Program
     {
         static void Main(string[] args)
         {
-            var numbers = new List<int>() { 1, 2, 3, 4 };
-            numbers.Add(1);
+            var date = new DateTime(2020, 1, 1);
+            Console.WriteLine(date);
 
-            numbers.AddRange(new int[3] { 5, 6, 7 });
+            var now = DateTime.Now;
+            Console.WriteLine("now =" + now);
+            var today = DateTime.Today;
+            Console.WriteLine("Today = " + today);
 
-            foreach(var number in numbers)
-            {
-                Console.WriteLine(number);
-            }
+            Console.WriteLine("Hour = " + now.Hour);
+            Console.WriteLine("Minute = " + now.Minute);
 
-            Console.WriteLine("Index of 1: " + numbers.IndexOf(1));
-            Console.WriteLine("Last Index of 1: " + numbers.LastIndexOf(1));
+            var tomorrow = now.AddDays(1);
+            var yesterday = now.AddDays(-1);
 
-            Console.WriteLine("Count = " + numbers.Count);
+            Console.WriteLine("Tomorrow = " + tomorrow);
+            Console.WriteLine("Yesterday = " + yesterday);
 
-            for(int i = 0; i < numbers.Count; i++)
-            {
-                if(numbers[i] == 1)
-                {
-                    numbers.Remove(numbers[i]);
-                }
-            }
+            Console.WriteLine(tomorrow.ToLongDateString());
+            Console.WriteLine(tomorrow.ToShortDateString());
 
-            foreach(var num in numbers)
-            {
-                Console.WriteLine(num);
-            }
+            Console.WriteLine(yesterday.ToLongTimeString());
+            Console.WriteLine(yesterday.ToShortTimeString());
 
-            numbers.Clear();
-            Console.WriteLine("Count = " + numbers.Count);
+            Console.WriteLine(today.ToString("dd-MMMM-yyy"));
         }
     }
 }
