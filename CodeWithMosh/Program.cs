@@ -14,6 +14,13 @@ namespace Class_Demo
         {
             Console.WriteLine($"Hello {name}, I am {Name}");
         }
+
+        public static Person Parse(string name)
+        {
+            var person = new Person();
+            person.Name = name;
+            return person;
+        }
     }
     class Program
     {
@@ -22,6 +29,9 @@ namespace Class_Demo
             var person = new Person();
             person.Name = "Santosh";
             person.Introduce("Roopa");
+
+            var person2 = Person.Parse("Sukruthi");
+            person2.Introduce("Samarth");
         }
     }
 }
