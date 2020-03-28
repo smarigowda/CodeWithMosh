@@ -4,34 +4,17 @@ using CodeWithMosh.Math;
 using CodeWithMosh.Enums;
 using System.Collections.Generic;
 
-namespace Class_Demo
+namespace Class_Constructors
 {
-    class Person
-    {
-        public string Name;
-
-        public void Introduce(string name)
-        {
-            Console.WriteLine($"Hello {name}, I am {Name}");
-        }
-
-        public static Person Parse(string name)
-        {
-            var person = new Person();
-            person.Name = name;
-            return person;
-        }
-    }
     class Program
     {
         static void Main(string[] args)
         {
-            var person = new Person();
-            person.Name = "Santosh";
-            person.Introduce("Roopa");
-
-            var person2 = Person.Parse("Sukruthi");
-            person2.Introduce("Samarth");
+            var customer = new Customer();
+            Console.WriteLine(customer.Id);
+            Console.WriteLine(customer.Name);
+            //customer.Id = 1;
+            //customer.Name = "Santosh Marigowda";
         }
     }
 }
